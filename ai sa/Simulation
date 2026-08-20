@@ -1,0 +1,134 @@
+console.log("======================================");
+console.log(" AI STUDY ASSISTANT SIMULATION");
+console.log("======================================");
+
+
+const student = {
+
+    name: "Lalitha",
+
+    subject: "Signals and Systems",
+
+    topic: "Fourier Transform",
+
+    availableTime: 120
+
+};
+
+
+// Study-time calculation
+
+const studyTime =
+    Math.floor(
+        student.availableTime * 0.6
+    );
+
+
+const practiceTime =
+    Math.floor(
+        student.availableTime * 0.3
+    );
+
+
+const revisionTime =
+    Math.floor(
+        student.availableTime * 0.1
+    );
+
+
+// Simulation output
+
+console.log("\nStudent Details");
+
+console.log(
+    "Name:",
+    student.name
+);
+
+console.log(
+    "Subject:",
+    student.subject
+);
+
+console.log(
+    "Topic:",
+    student.topic
+);
+
+console.log(
+    "Available Time:",
+    student.availableTime,
+    "minutes"
+);
+
+
+console.log("\nAI Study Plan");
+
+console.log(
+    "Study Time:",
+    studyTime,
+    "minutes"
+);
+
+console.log(
+    "Practice Time:",
+    practiceTime,
+    "minutes"
+);
+
+console.log(
+    "Revision Time:",
+    revisionTime,
+    "minutes"
+);
+
+
+// Recommendations
+
+console.log("\nAI Recommendations");
+
+console.log(
+    "1. Review Fourier Transform definition"
+);
+
+console.log(
+    "2. Study important properties"
+);
+
+console.log(
+    "3. Practice numerical problems"
+);
+
+console.log(
+    "4. Solve previous examination questions"
+);
+
+
+// Progress simulation
+
+let progress = 0;
+
+console.log("\nProgress Simulation");
+
+for (
+    let i = 1;
+    i <= 5;
+    i++
+) {
+
+    progress += 20;
+
+    console.log(
+        "Study Session " +
+        i +
+        ": " +
+        progress +
+        "%"
+    );
+
+}
+
+
+console.log("\n======================================");
+console.log(" SIMULATION COMPLETED");
+console.log("======================================");

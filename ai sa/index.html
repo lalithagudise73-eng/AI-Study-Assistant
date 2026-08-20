@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Study Assistant</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🤖 AI Study Assistant</h1>
+
+    <p>Your Smart Academic Learning Companion</p>
+
+</header>
+
+
+<main>
+
+    <!-- Input Section -->
+
+    <section class="card">
+
+        <h2>📚 Study Assistant</h2>
+
+        <label for="subject">
+            Select Subject
+        </label>
+
+        <select id="subject">
+
+            <option value="">
+                Select Subject
+            </option>
+
+            <option value="Mathematics">
+                Mathematics
+            </option>
+
+            <option value="Digital Electronics">
+                Digital Electronics
+            </option>
+
+            <option value="Microprocessors">
+                Microprocessors
+            </option>
+
+            <option value="Signals and Systems">
+                Signals and Systems
+            </option>
+
+            <option value="Java Programming">
+                Java Programming
+            </option>
+
+        </select>
+
+
+        <label for="topic">
+            Enter Topic
+        </label>
+
+        <input
+            type="text"
+            id="topic"
+            placeholder="Example: Fourier Transform"
+        >
+
+
+        <label for="studyTime">
+            Available Study Time
+        </label>
+
+        <select id="studyTime">
+
+            <option value="30">
+                30 Minutes
+            </option>
+
+            <option value="60">
+                1 Hour
+            </option>
+
+            <option value="120">
+                2 Hours
+            </option>
+
+            <option value="180">
+                3 Hours
+            </option>
+
+        </select>
+
+
+        <button onclick="generateStudyPlan()">
+            🤖 Generate Study Plan
+        </button>
+
+    </section>
+
+
+    <!-- AI Response -->
+
+    <section class="card">
+
+        <h2>🧠 AI Study Recommendation</h2>
+
+        <div id="result">
+
+            <p>
+                Select a subject and enter a topic
+                to generate your study plan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Progress -->
+
+    <section class="card">
+
+        <h2>📊 Study Progress</h2>
+
+        <div class="progress-container">
+
+            <div
+                id="progressBar"
+                class="progress-bar">
+            </div>
+
+        </div>
+
+        <p id="progressText">
+            Progress: 0%
+        </p>
+
+        <button onclick="increaseProgress()">
+            Complete Study Session
+        </button>
+
+    </section>
+
+
+    <!-- Quiz -->
+
+    <section class="card">
+
+        <h2>❓ Quick Quiz</h2>
+
+        <div id="quiz">
+
+            <p>
+                Complete a study plan to generate
+                a practice question.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        AI Study Assistant | Academic Project
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

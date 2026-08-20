@@ -1,0 +1,181 @@
+console.log("======================================");
+console.log(" AI STUDY ASSISTANT TESTBENCH");
+console.log("======================================");
+
+
+// Calculate study time
+
+function calculateStudyTime(totalTime) {
+
+    const study =
+        Math.floor(totalTime * 0.6);
+
+    const practice =
+        Math.floor(totalTime * 0.3);
+
+    const revision =
+        Math.floor(totalTime * 0.1);
+
+    return {
+        study,
+        practice,
+        revision
+    };
+
+}
+
+
+// Validate user input
+
+function validateInput(
+    subject,
+    topic
+) {
+
+    if (!subject || !topic) {
+
+        return false;
+
+    }
+
+    return true;
+
+}
+
+
+// Progress calculation
+
+function updateProgress(
+    currentProgress
+) {
+
+    let progress =
+        currentProgress + 20;
+
+    if (progress > 100) {
+
+        progress = 100;
+
+    }
+
+    return progress;
+
+}
+
+
+// --------------------------------------
+// Test 1
+// --------------------------------------
+
+console.log("\nTest 1: Study Time Calculation");
+
+let time =
+    calculateStudyTime(100);
+
+
+console.log(
+    time.study === 60 &&
+    time.practice === 30 &&
+    time.revision === 10
+        ? "PASS"
+        : "FAIL"
+);
+
+
+console.log(
+    "Study:",
+    time.study
+);
+
+console.log(
+    "Practice:",
+    time.practice
+);
+
+console.log(
+    "Revision:",
+    time.revision
+);
+
+
+// --------------------------------------
+// Test 2
+// --------------------------------------
+
+console.log("\nTest 2: Valid Input");
+
+console.log(
+    validateInput(
+        "Mathematics",
+        "Algebra"
+    )
+        ? "PASS"
+        : "FAIL"
+);
+
+
+// --------------------------------------
+// Test 3
+// --------------------------------------
+
+console.log("\nTest 3: Invalid Input");
+
+console.log(
+    !validateInput(
+        "",
+        ""
+    )
+        ? "PASS"
+        : "FAIL"
+);
+
+
+// --------------------------------------
+// Test 4
+// --------------------------------------
+
+console.log("\nTest 4: Progress Update");
+
+let progress =
+    updateProgress(40);
+
+
+console.log(
+    progress === 60
+        ? "PASS"
+        : "FAIL"
+);
+
+
+console.log(
+    "Progress:",
+    progress + "%"
+);
+
+
+// --------------------------------------
+// Test 5
+// --------------------------------------
+
+console.log("\nTest 5: Maximum Progress");
+
+let maxProgress =
+    updateProgress(100);
+
+
+console.log(
+    maxProgress === 100
+        ? "PASS"
+        : "FAIL"
+);
+
+
+console.log(
+    "Progress:",
+    maxProgress + "%"
+);
+
+
+console.log("\n======================================");
+console.log(" ALL TESTS COMPLETED");
+console.log("======================================");
